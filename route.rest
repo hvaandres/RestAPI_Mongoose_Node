@@ -7,7 +7,7 @@ GET http://localhost:3000/mickeymouse/characters/iss
 
 ###
 
-Post http://localhost:3000/mickeymouse/characters
+Post http://localhost:3000/localhost:3000/mickeymouse/characters
 
 {
     "name": "Donald",

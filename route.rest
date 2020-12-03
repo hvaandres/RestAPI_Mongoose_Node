@@ -1,0 +1,19 @@
+GET http://localhost:3000/mickeymouse
+
+###
+
+GET http://localhost:3000/mickeymouse/characters/iss
+
+
+###
+
+Post http://localhost:3000/mickeymouse/characters
+
+{
+    "name": "Donald",
+    
+}
+
+###
+
+###

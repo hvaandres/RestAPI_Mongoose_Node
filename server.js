@@ -6,7 +6,6 @@ const mongoose = require("mongoose");
 mongoose.connect(process.env.DATABASE_URL, {
   useUnifiedTopology: true,
   useNewUrlParser: true,
-  useCreateIndex: true,
 });
 
 const db = mongoose.connection;
@@ -16,6 +15,6 @@ db.once("open", () => console.log("We are connected to our Database"));
 app.use(express.json());
 
 const disneyCharacters = require("./routes/disneyCharacters");
-app.use("/disneyCharacter", disneyCharacters);
+app.use("/disneyCharacters", disneyCharacters);
 
 app.listen(3000, () => console.log("Server Started"));

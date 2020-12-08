@@ -5,13 +5,13 @@ This is just a test to see how we can build a REST API to make sure we can add s
 # Start Pulling Data
 
 ```
-GET http://localhost:3000/mickeymouse
+GET http://localhost:3000/disneyCharacters
 ```
 
 # Start Adding New Disney Characters
 
 ```
-POST http://localhost:3000/localhost:3000/characters
+POST http://localhost:3000/localhost:3000/disneyCharacters
 
 ```
 
@@ -19,7 +19,7 @@ POST http://localhost:3000/localhost:3000/characters
 
 ```
 
-PATCH http://localhost:3000/localhost:3000/characters/[character_id]
+PATCH http://localhost:3000/localhost:3000/disneyCharacters/[character_id]
 
 ```
 
@@ -27,6 +27,6 @@ PATCH http://localhost:3000/localhost:3000/characters/[character_id]
 
 ```
 
-DELETE http://localhost:3000/localhost:3000/characters/[character_id]
+DELETE http://localhost:3000/localhost:3000/disneyCharacters/[character_id]
 
 ```

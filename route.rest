@@ -1,18 +1,18 @@
-GET http://localhost:3000/localhost:3000/subscribers
+GET http://localhost:3000/localhost:3000/disneyCharacter
 
 ###
 
-GET http://localhost:3000/localhost:3000/subscribers
+GET http://localhost:3000/localhost:3000/disneyCharacter
 
 
 ###
 
-Post http://localhost:3000/subscribers
+Post http://localhost:3000/disneyCharacter
 Content-Type: application/json
 
 {
-    "name": "amazing and nice",
-    "subscribedToChanel": "hvaandres"
+    "name": "Mickey Mouse",
+    "details": "First Character from Disney"
 }
 
 ###

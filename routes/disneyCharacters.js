@@ -1,13 +1,13 @@
 const express = require("express");
 const router = express.Router();
-const mickeymouse = require("../models/mickeymouse");
+const Disney = require("../models/disneyCharacter");
 
-// Getting all Characters
+// Getting all character
 
 router.get("/", async (req, res) => {
   try {
-    const characters = await mickeymouse.find();
-    res.json(characters);
+    const character = await Disney.find();
+    res.json(character);
   } catch (err) {
     res.status(500).json({ message: err.message });
   }
@@ -19,9 +19,9 @@ router.get("/:id", getCharacter, (req, res) => {
 
 // Creating new Character
 router.post("/", async (req, res) => {
-  const character = new mickeymouse({
+  const character = new Disney({
     name: req.body.name,
-    dateOfBirth: req.body.dateOfBirth,
+    details: req.body.details,
   });
   try {
     const newCharacter = await character.save();
@@ -31,13 +31,13 @@ router.post("/", async (req, res) => {
   }
 });
 
-// Updating one Character
+// Updating one character
 router.patch("/:id", getCharacter, async (req, res) => {
   if (req.body.name != null) {
     res.character.name = req.body.name;
   }
-  if (req.body.subscribedToChannel != null) {
-    res.character.subscribedToChannel = req.body.subscribedToChannel;
+  if (req.body.details != null) {
+    res.character.details = req.body.details;
   }
   try {
     const updateCharacter = await res.character.save();
@@ -47,7 +47,7 @@ router.patch("/:id", getCharacter, async (req, res) => {
   }
 });
 
-// Deleting one Character
+// Deleting one character
 router.delete("/:id", getCharacter, async (req, res) => {
   try {
     await res.character.remove();

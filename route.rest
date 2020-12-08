@@ -1,17 +1,18 @@
-GET http://localhost:3000/mickeymouse
+GET http://localhost:3000/localhost:3000/subscribers
 
 ###
 
-GET http://localhost:3000/mickeymouse/characters/iss
+GET http://localhost:3000/localhost:3000/subscribers
 
 
 ###
 
-Post http://localhost:3000/localhost:3000/mickeymouse/characters
+Post http://localhost:3000/subscribers
+Content-Type: application/json
 
 {
-    "name": "Donald",
-    
+    "name": "amazing and nice",
+    "subscribedToChanel": "hvaandres"
 }
 
 ###

@@ -7,7 +7,7 @@ const disneyCharacter = new mongoose.Schema({
   },
   details: {
     type: String,
-    required: false,
+    required: true,
   },
   subscribeDate: {
     type: Date,
